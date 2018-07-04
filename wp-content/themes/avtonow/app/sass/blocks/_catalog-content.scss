@@ -1,0 +1,168 @@
+.catalog-content {
+  width: 839px;
+  box-sizing: border-box;
+}
+
+.catalog-content__breadcrumbs {
+  @include font('PT Sans', sans-serif, 18px, 24px, #000, 400);
+  letter-spacing: .025em;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.catalog-content__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  @include font('PT Sans', sans-serif, 36px, 1.2em, #082e55, 700);
+  letter-spacing: .025em;
+  text-transform: uppercase;
+
+  &--search {
+    font-size: 30px;
+  }
+}
+
+.catalog-content__tile {
+  background-color: #fff;
+  padding: 24px 10px 28px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.catalog-content__tile-abs-link {
+  display: none;
+}
+
+.catalog-content__tile-img {
+  margin-right: 31px;
+  max-width: 289px;
+}
+
+.catalog-content__tile-desc-title {
+  @include font('PT Sans', sans-serif, 24px, 1.2em, #082e55, 700);
+  letter-spacing: .025em;
+  margin-top: -7px;
+  margin-bottom: 15px;
+}
+
+.catalog-content__tile-desc-title-link {
+  text-decoration: none;
+}
+
+.catalog-content__tile-desc-items {
+  margin-bottom: 15px;
+}
+
+.catalog-content__tile-desc-item {
+  @include font('PT Sans', sans-serif, 20px, 30px, #000000, 400);
+  letter-spacing: .025em;
+  display: block;
+
+  &-inner {
+    color: #082e55;
+    font-weight: bold;
+  }
+}
+
+.catalog-content__tile-desc-button {
+  @include font('PT Sans', sans-serif, 18px, 24px, #fff, 400);
+  letter-spacing: .025em;
+  background-color: #082e55;
+  text-decoration: none;
+  padding: 10px 33px;
+  display: inline-block;
+  width: 200px;
+  box-sizing: border-box;
+  text-align: center;
+
+  &--1 {
+    margin-right: 28px;
+  }
+
+  &--2 {
+    background-color: #acacac;
+  }
+}
+
+.catalog-content__pagination {
+  margin-top: 30px;
+}
+
+@media (max-width: 1170px) {
+  .catalog-content {
+    width: 100%;
+  }
+
+  .catalog-content__tile {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .catalog-content__tile-abs-link {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .catalog-content__tile-desc-title {
+    font-size: 17px;
+  }
+
+  .catalog-content__tile-desc-item {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .catalog-content__tile-desc-item-inner {
+    display: block;
+  }
+
+  .catalog-content__tile-img {
+    width: 170px;
+    align-self: center;
+    margin-right: 15px;
+  }
+
+  .catalog-content__tile-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .catalog-content__tile-desc-item {
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .catalog-content__tile-desc-button {
+    width: 90%;
+    max-width: 137px;
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 17px;
+    padding: 7px 5px;
+    &--2 {
+      display: none;
+    }
+  }
+
+  .catalog-content__breadcrumbs,
+  .catalog-content__title {
+    text-align: center;
+  }
+
+  .catalog-content__title {
+    &--search {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

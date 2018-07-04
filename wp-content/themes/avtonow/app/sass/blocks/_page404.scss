@@ -1,0 +1,25 @@
+.page404 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.page404__img {
+  max-width: 100%;
+}
+
+.page404__text {
+  @include font('PT Sans', sans-serif, 42px, 1.2em, #2196f3, 700);
+  letter-spacing: .025em;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media (max-width: 1170px) {
+  .page404__text {
+    font-size: 32px;
+  }
+}

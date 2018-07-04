@@ -1,0 +1,217 @@
+.footer {
+  margin-top: 50px;
+}
+
+.footer__top {
+  background-color: #345e80;
+}
+
+.footer__top-container {
+  width: 1169px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.footer__title {
+  @include font('PT Sans', sans-serif, 32px, 1.2em, #fff, 700);
+  letter-spacing: .025em;
+  padding-bottom: 15px;
+  display: block;
+}
+
+.footer__phone-map-wrapper {
+  display: flex;
+}
+
+.footer__phone {
+  margin-right: 30px;
+}
+
+.footer__phone-img {
+  margin-right: 15px;
+  position: relative;
+  top: 12px;
+}
+
+.footer__phone-number {
+  @include font('PT Sans', sans-serif, 54px, 43px, #fff, 700);
+  letter-spacing: .025em;
+}
+
+.footer__phone-number-sub {
+  @include font('PT Sans', sans-serif, 36px, 43px, #fff, 400);
+}
+
+.footer__phone-small-text {
+  display: block;
+  @include font('PT Sans', sans-serif, 18px, 24px, #fff, 700);
+  letter-spacing: .025em;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.footer__location-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+}
+
+.footer__location-img {
+  margin-right: 15px;
+}
+
+.footer__address {
+  @include font('PT Sans', sans-serif, 24px, 26px, #fff, 700);
+  letter-spacing: .025em;
+}
+
+.footer__bottom {
+  background-color: #252525;
+}
+
+.footer__bottom-container {
+  width: 1169px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.footer__copyright {
+  @include font('PT Sans', sans-serif, 18px, 24px, #fff, 400);
+  letter-spacing: .025em;
+}
+
+.footer__form-wrap {
+  display: none;
+}
+
+@media (max-width: 1170px) {
+  .footer__top-container {
+    width: 100%;
+    //padding-left: 7px;
+    //padding-right: 7px;
+    box-sizing: border-box;
+  }
+
+  .footer__title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .footer__phone-map-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__phone {
+    margin-right: 0;
+  }
+
+  .footer__phone-number {
+    font-size: 43px;
+  }
+
+  .footer__phone-number-sub {
+    font-size: 28px;
+  }
+
+  .footer__phone-small-text {
+    font-size: 14px;
+  }
+
+  .footer__address {
+    font-size: 18px;
+  }
+
+  .footer__phone-img,
+  .footer__location-img {
+    width: 27px;
+  }
+
+  .footer__bottom-container {
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+  }
+
+  .footer__form-wrap {
+    display: block;
+  }
+
+  .footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__form-title {
+    @include font('PT Sans', sans-serif, 30px, 1.2em, #082e55, 700);
+    letter-spacing: .025em;
+    text-align: center;
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .footer__form-subtitle {
+    @include font('PT Sans', sans-serif, 24px, 1em, #484848, 700);
+    letter-spacing: .025em;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .footer__form-input {
+    height: 53px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    max-width: 270px;
+    outline: none;
+    @include font('PT Sans', sans-serif, 16px, 1.2em, #898989, 400);
+
+    &--tel {
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer__form-submit {
+    height: 53px;
+    @include font('PT Sans', sans-serif, 22px, 24px, #ffffff, 400);
+    letter-spacing: .025em;
+    border: none;
+    width: 100%;
+    max-width: 270px;
+    box-sizing: border-box;
+    outline: none;
+    background-color: #5078a0;
+    margin-bottom: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .footer__form-small-text {
+    @include font('PT Sans', sans-serif, 14px, 1.2em, #898989, 400);
+    letter-spacing: .025em;
+    max-width: 225px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+}

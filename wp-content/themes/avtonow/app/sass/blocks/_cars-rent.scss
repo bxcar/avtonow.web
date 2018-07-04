@@ -1,0 +1,104 @@
+.cars-rent__container {
+  width: 1169px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cars-rent__block {
+  margin-bottom: 20px;
+}
+
+.cars-rent__images {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+
+  &--spbtw {
+    justify-content: space-between;
+  }
+}
+
+.cars-rent__img-link {
+  display: flex;
+}
+
+.cars-rent__img {
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.cars-rent__titles {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  margin-top: 20px;
+  background-color: #5078a0;
+}
+
+.cars-rent__text-link {
+  @include font('PT Sans', sans-serif, 27px, 32px, #fff, 700);
+  letter-spacing: .025em;
+  text-decoration: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &--min {
+    @include font('PT Sans', sans-serif, 14px, 16px, #fff, 700);
+  }
+
+  &:hover {
+    //background-color: #5077a0;
+  }
+
+  &--mob {
+    display: none;
+  }
+}
+
+@media (max-width: 1350px) {
+  .cars-rent__container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1170px) {
+  .cars-rent__container {
+    width: 100%;
+  }
+
+  .cars-rent__block {
+    margin-bottom: 0;
+  }
+
+  .cars-rent__images {
+    flex-direction: column;
+  }
+
+  .cars-rent__text-link {
+    display: none;
+
+    &--mob {
+      display: block;
+      background-color: #5078a0;
+      text-align: center;
+      width: 100%;
+      max-width: 320px;
+      align-self: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-size: 20px;
+    }
+  }
+
+  .cars-rent__img {
+    align-self: center;
+    max-width: 227px;
+  }
+
+  .cars-rent__img-link {
+    flex-direction: column;
+    justify-content: space-around;
+    text-decoration: none;
+    height: 240px;
+  }
+}

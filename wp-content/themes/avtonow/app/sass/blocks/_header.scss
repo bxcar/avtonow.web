@@ -1,0 +1,265 @@
+.header__container {
+  width: 1169px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header__menu-item {
+  margin-right: 22px;
+}
+
+.header__menu-item-link {
+  @include font('PT Sans', sans-serif, 20px, 24px, #3c3c3c, 400);
+  letter-spacing: .025em;
+  text-decoration: none;
+}
+
+.header__bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.header__logo {
+  width: 450px;
+  text-decoration: none;
+}
+
+.header__logo-text {
+  @include font('PT Sans', sans-serif, 53px, inherit, #3c3c3c, 700);
+  letter-spacing: .025em;
+
+  &--1 {
+    color: #555555;
+  }
+
+  &--2 {
+    color: #082e55;
+  }
+}
+
+.header__phone-img {
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+.header__phone-number {
+  @include font('PT Sans', sans-serif, 38px, 30px, #082e55, 700);
+  letter-spacing: .025em;
+}
+
+.header__phone-number-sub {
+  @include font('PT Sans', sans-serif, 25px, 30px, #082e55, 400);
+}
+
+.header__callback {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.header__callback-button {
+  @include font('PT Sans', sans-serif, 20px, 24px, #fff, 400);
+  letter-spacing: .025em;
+  text-decoration: none;
+  background-color: #082e55;
+  padding: 10px 17px;
+}
+
+.header__order-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header__order-text {
+  @include font('PT Sans', sans-serif, 20px, 24px, #082e55, 700);
+  letter-spacing: .025em;
+  margin-left: 10px;
+}
+
+.header__burger-wrapper{
+  display: none;
+  width: 62px;
+  background-color: #d1cac9;
+  position: relative;
+  color: white;
+  text-align: center;
+  height: 62px;
+
+  &.active {
+    width: 100%;
+  }
+}
+
+.header__burger-check-menu {
+  display: none;
+}
+
+.header__burger-check-menu-label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  line-height: 40px;
+}
+
+.header__burger-line {
+  position: absolute;
+  top: 15px;
+  //right: 8px;
+  left: 8px;
+  width: 44px;
+  height: 3px;
+  background-color: #ebebeb;
+  transition: .5s all;
+}
+
+.header__burger-second, .header__burger-third{
+  top: 27px;
+}
+
+.header__burger-fourth{
+  top: 39px;
+}
+
+.header__burger-main-menu{
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transform: translateY(100%);
+  max-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  transition: .5s all;
+}
+
+.header__burger-link {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,.3);
+  background-color: #d1cac9;
+}
+
+.header__burger-link:hover{
+  background-color: rgb(150, 133, 131);
+}
+
+.header__burger-check-menu:checked ~ .header__burger-main-menu{
+  max-height: 500px;
+  font-size: 16px;
+}
+
+.header__burger-check-menu:checked ~ .header__burger-first{
+  display: none;
+}
+
+.header__burger-check-menu:checked ~ .header__burger-second{
+  transform: rotate(45deg);
+}
+
+.header__burger-check-menu:checked ~ .header__burger-third{
+  transform: rotate(-45deg);
+}
+
+.header__burger-check-menu:checked ~ .header__burger-fourth{
+  display: none;
+}
+
+.header__search {
+  display: none;
+}
+
+@media (max-width: 1170px) {
+  .header__menu,
+  .header__order {
+    display: none;
+  }
+
+  .header__burger-wrapper {
+    display: block;
+  }
+
+  .header__container {
+    width: 100%;
+  }
+
+  .header__bottom {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    width: auto;
+    margin-bottom: 8px;
+  }
+
+  .header__phone {
+    margin-bottom: 15px;
+  }
+
+  .header__callback-button {
+    display: block;
+  }
+
+  .header__search-burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .header__search {
+    display: block;
+    position: absolute;
+    right: 23px;
+    top: 19px;
+  }
+
+  .header__search-form {
+    display: none;
+  }
+
+  .header__search-form-submit {
+    background: none;
+    border: none;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .header__search-input {
+    font-family: PT Sans,sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+    color: #545454;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #d1cac9;
+    padding: 10px 15px;
+    border-radius: 50px;
+    outline: none;
+  }
+}
